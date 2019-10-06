@@ -1,0 +1,69 @@
+{
+  "name": "code-power.ru",
+  "version": "1.0.0",
+  "description": "Oficial site organisation code of power",
+  "main": "main.js",
+  "scripts": {
+    "start": "TS_NODE_PROJECT=\"webpack/webpack-tsconfig.json\" webpack-dev-server --config webpack.config.ts --open --mode development",
+    "build": "TS_NODE_PROJECT=\"webpack/webpack-tsconfig.json\" webpack --config webpack.config.ts --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code-of-Power/code-power.ru.git"
+  },
+  "keywords": [
+    "code-power",
+    "code-of-power"
+  ],
+  "browserslist": [
+    "Chrome 77"
+  ],
+  "author": "eXlight",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Code-of-Power/code-power.ru/issues"
+  },
+  "homepage": "https://github.com/Code-of-Power/code-power.ru#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^5.0.0",
+    "@types/html-webpack-plugin": "^3.2.0",
+    "@types/mini-css-extract-plugin": "^0.2.1",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^12.6.2",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/reflect-metadata": "^0.1.0",
+    "@types/rimraf": "^2.0.2",
+    "@types/webpack": "^4.4.34",
+    "@types/webpack-dev-server": "^3.1.7",
+    "@types/yup": "^0.26.21",
+    "base-href-webpack-plugin": "^2.0.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.2.1",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslint": "^5.11.0",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
