@@ -1,0 +1,11 @@
+@import "styles/_variables";
+
+#menu {
+    z-index: 1;
+    height: 100px;
+    top: 0;
+    background: #fff;
+    .menu-item {
+        color: $main-color;
+    }
+}
