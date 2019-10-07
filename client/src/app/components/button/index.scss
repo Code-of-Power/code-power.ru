@@ -5,9 +5,12 @@
     width: 100%;
     border: 2px solid $main-color;
     background: transparent;
-    color: #fff;
+    color: $text-color;
 
-    &.default {}
+    &.default {
+        height: 35px;
+        border: 2px solid $text-color;
+    }
 
     &.danger {}
 
