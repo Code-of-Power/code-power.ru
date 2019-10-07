@@ -1,4 +1,14 @@
+@import "styles/variables.scss";
+
 body {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.fon-section {
+    background: url('/build/fon.png');
+}
+
+.head {
+    font-size: $size-1;
 }

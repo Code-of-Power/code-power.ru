@@ -11,7 +11,7 @@ import { Menu } from './components/menu';
 
 export function Application() {
     return (
-        <div className="container">
+        <div className="fon-section">
             <Menu />
             <About />
             <Projects />
