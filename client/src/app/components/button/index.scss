@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.cop-button {
+    height: 60px;
+    width: 100%;
+    border: 2px solid $main-color;
+    background: transparent;
+    color: #fff;
+
+    &.default {}
+
+    &.danger {}
+
+    &.primary {}
+}
