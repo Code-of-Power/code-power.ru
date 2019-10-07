@@ -2,6 +2,6 @@ import * as React from 'react';
 
 export function Join() {
     return (
-        <div></div>
+        <section className="vh-100"></section>
     );
 }
