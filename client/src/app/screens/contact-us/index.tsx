@@ -19,7 +19,7 @@ export function ContactUs() {
                             Заинтересовали наши услуги, хотите присоедениться к нам
                             или есть другие вопросы или предложения?
                             Заполните простую форму или отправьте нам письмо на&nbsp;
-                            <a href="mailto:">code-power@gmail.com</a>&nbsp;
+                            <a href="mailto:code-power@gmail.com">code-power@gmail.com</a>&nbsp;
                             и мы обязательно свяжемся с Вами.
                         </span>
                     </div>

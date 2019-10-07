@@ -19,8 +19,6 @@ export function Application() {
             <OurServices />
             <ContactUs />
             <Footer />
-            <Customer />
-            <Join />
         </div>
     );
 }
