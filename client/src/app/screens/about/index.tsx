@@ -7,17 +7,17 @@ export function About() {
             <div className="container">
                 <div className="tagline row justify-content-center">
                     <div className="col-10">
-                        <h1 className="head">
+                        <h1 className="h1">
                             <span className="text-primary font-weight-bold">Мощь</span>
                             &nbsp;
                             <span className="text-white font-weight-bold">нашего кода</span>
                         </h1>
-                        <h2 className="text-white font-weight-bold">для ваших технологичных продуктов!</h2>
+                        <h2 className="text-white h3">для ваших технологичных продуктов!</h2>
                     </div>
                 </div>
                 <div className="row">
                     <div className="offset-md-1 col-6">
-                        <h2>
+                        <h2 className="h3">
                             <span className="text-primary font-weight-bold">Code of Power</span>
                             &nbsp;
                             <span className="text-white font-weight-bold">

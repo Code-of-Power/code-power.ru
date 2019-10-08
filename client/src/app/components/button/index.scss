@@ -3,16 +3,38 @@
 .cop-button {
     height: 60px;
     width: 100%;
-    border: 2px solid $main-color;
     background: transparent;
     color: $text-color;
 
     &.default {
         height: 35px;
         border: 2px solid $text-color;
+        transition: .5s box-shadow;
+
+        &:hover {
+            transition: .5s box-shadow;
+            box-shadow: 0 0.5rem 1rem $text-color;
+        }
     }
 
-    &.danger {}
+    &.danger {
+        height: 35px;
+        transition: .5s box-shadow;
+        border: 2px solid $danger-color;
 
-    &.primary {}
+        &:hover {
+            transition: .5s box-shadow;
+            box-shadow: 0 0.5rem 1rem $danger-color;
+        }
+    }
+
+    &.primary {
+        border: 2px solid $main-color;
+        transition: .5s box-shadow;
+
+        &:hover {
+            transition: .5s box-shadow;
+            box-shadow: 0 0.5rem 1rem $main-color;
+        }
+    }
 }
