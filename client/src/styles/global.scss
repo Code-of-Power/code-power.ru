@@ -9,6 +9,17 @@ body {
     background: url('/build/fon.png');
 }
 
-.head {
+.h1 {
     font-size: $size-1;
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: $size-2;
+    font-weight: bold;
+}
+
+.h3 {
+    font-size: $size-3;
+    font-weight: bold;
 }

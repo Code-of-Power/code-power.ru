@@ -2,8 +2,14 @@ $main-color: #219653;
 $text-color: #F2F2F2;
 $danger-color: #EB5757;
 
-$size-1: 4.57rem;
-$size-2: 1.71rem;
+$size-1: 4.57rem; // 64 px
+$size-2: 2.57rem; // 36 px
+$size-3: 1.71rem; // 24 px
 
 $primary: $main-color;
 $danger: $danger-color;
+
+$font-size-base: 1rem;
+$font-size-h1: $size-1;
+$font-size-h2: $size-2;
+$font-size-h3: $size-3;
