@@ -8,17 +8,23 @@ import { Peoples } from './screens/peoples';
 import { Projects } from './screens/projects';
 import { Footer } from './components/footer';
 import { Menu } from './components/menu';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 export function Application() {
     return (
-        <div className="fon-section">
-            <Menu />
-            <About />
-            <Projects />
-            <Peoples />
-            <OurServices />
-            <ContactUs />
-            <Footer />
-        </div>
+        <Provider store={store}>
+            <div className="fon-section">
+                <Menu />
+                <About />
+                <Projects />
+                <Peoples />
+                <OurServices />
+                <ContactUs />
+                <Join />
+                <Customer />
+                <Footer />
+            </div>
+        </Provider>
     );
 }
