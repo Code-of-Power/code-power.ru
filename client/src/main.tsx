@@ -7,4 +7,4 @@ import './styles.scss';
 
 const root = document.getElementById('app');
 
-render(<Application />, root)
+render(<Application />, root);
