@@ -1,0 +1,24 @@
+@import "styles/variables";
+
+.member {
+    width: 180px;
+    height: 180px;
+
+    >div {
+        background: #ffffff;
+        border: 2px $main-color solid;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .member-description {
+        bottom: 0;
+        background: #000000cb;
+    }
+}
