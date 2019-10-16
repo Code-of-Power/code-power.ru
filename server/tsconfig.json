@@ -9,18 +9,13 @@
         "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "jsx": "react",
         "baseUrl": "./src",
         "lib": [
             "es6",
             "dom",
             "es2015.reflect"
         ],
-        "types": [
-            "react",
-            "react-dom",
-            "reflect-metadata"
-        ],
+        "types": [],
         "moduleResolution": "node"
     },
     "include": [
