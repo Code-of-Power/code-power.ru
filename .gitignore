@@ -1,4 +1,8 @@
-/client/node_modules
-/server/node_modules
+# MODULES
+node_modules
+
+# BUILDS
 /public
-/client/src/enviroment/*.env
+
+# ENV
+*.env
