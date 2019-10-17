@@ -1,12 +1,13 @@
 import { IClientFormApi } from '@app/interfaces/api';
 import { object, ObjectSchema, string } from 'yup';
+import { IModel } from '@app/interfaces/app';
 
-export class CustomerForm implements IClientFormApi {
-    company: string;
-    email: string;
+export class CustomerForm implements IClientFormApi, IModel<IClientFormApi> {
+    company: string = '';
+    email: string = '';
     interested: string;
-    message: string;
-    name: string;
+    message: string = '';
+    name: string = '';
 
     private schema: ObjectSchema<IClientFormApi>;
 
@@ -33,5 +34,19 @@ export class CustomerForm implements IClientFormApi {
 
     async validate() {
         return this.schema.validate(this.toJSON());
+    }
+
+    asState(): IClientFormApi {
+        return this.toJSON();
+    }
+
+    nextState(state: IClientFormApi): CustomerForm {
+        const nextState = new CustomerForm();
+        nextState.company = state.company;
+        nextState.email = state.email;
+        nextState.interested = state.interested;
+        nextState.message = state.message;
+        nextState.name = state.name;
+        return nextState;
     }
 }

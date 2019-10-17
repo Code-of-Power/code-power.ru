@@ -1,11 +1,12 @@
 import { IJoinFormApi } from '@app/interfaces/api';
 import { ObjectSchema, object, string } from 'yup';
+import { IModel } from '@app/interfaces/app';
 
-export class JoinForm implements IJoinFormApi {
-    email: string;
-    message: string;
-    name: string;
-    specialisation: string;
+export class JoinForm implements IJoinFormApi, IModel<IJoinFormApi> {
+    email: string = '';
+    message: string = '';
+    name: string = '';
+    specialisation: string = '';
 
     private schema: ObjectSchema<IJoinFormApi>;
 
@@ -29,5 +30,18 @@ export class JoinForm implements IJoinFormApi {
 
     async validate() {
         return this.schema.validate(this.toJSON());
+    }
+
+    asState(): IJoinFormApi {
+        return this.toJSON();
+    }
+
+    nextState(state: IJoinFormApi) {
+        const newState = new JoinForm();
+        newState.email = state.email;
+        newState.message = state.message;
+        newState.name = state.name;
+        newState.specialisation = state.specialisation;
+        return newState;
     }
 }

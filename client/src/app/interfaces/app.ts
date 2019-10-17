@@ -17,3 +17,8 @@ export interface IMember {
 }
 
 export type CustomerOption = 'spa' | 'testing' | 'api' | 'mobile' | 'desktop' | 'devops';
+
+export interface IModel<T> {
+    nextState(state:T): T;
+    asState(): T;
+}
