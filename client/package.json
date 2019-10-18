@@ -33,6 +33,7 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-symbiote": "^3.2.0",
+    "redux-thunk": "^2.3.0",
     "yup": "^0.27.0"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "@types/react-redux": "^7.1.4",
     "@types/react-router-dom": "^4.3.4",
     "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
     "@types/reflect-metadata": "^0.1.0",
     "@types/rimraf": "^2.0.2",
     "@types/webpack": "^4.4.34",
