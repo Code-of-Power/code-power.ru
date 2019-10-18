@@ -9,7 +9,7 @@
         "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "baseUrl": "./src",
+        "baseUrl": "src",
         "lib": [
             "es6",
             "dom",

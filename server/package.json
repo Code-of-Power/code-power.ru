@@ -4,7 +4,8 @@
   "description": "API official site of organisation code-of-power",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=dev ts-node -r dotenv/config src/main.ts dotenv_config_path=env/dev.env",
+    "start:dev": "nodemon"
   },
   "repository": {
     "type": "git",
