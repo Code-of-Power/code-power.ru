@@ -57,7 +57,7 @@ export default (_, argv) => {
                 }, 'css-loader', 'sass-loader']
             }]
         },
-        plugins: getPlugins(isProd, null),
+        plugins: getPlugins(isProd),
         optimization: {
             minimize: isProd,
             noEmitOnErrors: true,

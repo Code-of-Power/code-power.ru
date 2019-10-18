@@ -42,7 +42,8 @@
         "types": [
             "react",
             "react-dom",
-            "reflect-metadata"
+            "reflect-metadata",
+            "node"
         ],
         "moduleResolution": "node"
     },

@@ -1,16 +1,14 @@
-import { DefinePlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { BaseHrefWebpackPlugin } from 'base-href-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import Dotenv from 'dotenv-webpack';
 
-export const getPlugins = (mode, domain) => {
+export const getPlugins = (mode: boolean) => {
     const plugins = [
-        new DefinePlugin({
-            'API_URL': JSON.stringify(domain),
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
+        new Dotenv({
+            path: mode ? '/enviroment/prod.env' : '/enviroment/dev.env',
+            silent: false,
         }),
         new HtmlWebpackPlugin({
             title: 'React App',

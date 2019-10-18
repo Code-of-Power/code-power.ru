@@ -1,8 +1,8 @@
 import { IClientFormApi, IJoinFormApi } from '@app/interfaces/api';
 import { Dispatch } from 'redux';
 import { actions } from '@app/reducers/forms';
+import { DOMAIN } from '@app/consts/env';
 
-const DOMAIN = '';
 const OPTIONS: RequestInit = {
     method: 'POST',
     cache: 'no-cache',
