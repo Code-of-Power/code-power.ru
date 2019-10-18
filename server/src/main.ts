@@ -1,9 +1,15 @@
 import * as fastify from 'fastify';
 import { notifyMembersAboutMember, notifyMembersAboutCustomer } from './mailer';
+import * as cors from 'fastify-cors';
 
 const server = fastify({ logger: true });
+server.register(cors, {
+
+});
 
 const MEMBERS = JSON.parse(process.env.MEMBERS) as string[];
+
+server.options('/api/v1/*', (request, reply) => { reply.send() });
 
 server.post('/api/v1/join', async (request, reply) => {
     await notifyMembersAboutMember(MEMBERS, request.body);
