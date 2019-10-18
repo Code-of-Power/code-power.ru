@@ -7,10 +7,10 @@ export function Footer() {
             <div className="container">
                 <div className="row justify-content-between py-4">
                     <div>
-                        {MENU.map(item => (<a className="mr-2" href={item.route}>{item.title}</a>))}
+                        {MENU.map((item, i) => (<a className="mr-2" key={i} href={item.route}>{item.title}</a>))}
                     </div>
                     <div>
-                        {SOCIAL.map(item => (<a className="mr-2" href={item.route}>{item.title}</a>))}
+                        {SOCIAL.map((item, i) => (<a className="mr-2" key={i} href={item.route}>{item.title}</a>))}
                     </div>
                 </div>
                 <div className="row justify-content-between pb-4">
@@ -19,13 +19,13 @@ export function Footer() {
                         <a className="mr-2" href="mailto:code-power@gmail.com">code-power@gmail.com</a>
                     </div>
                     <div>
-                        {CODE_SOCIAL.map(item => (<a className="mr-2" href={item.route}>{item.title}</a>))}
+                        {CODE_SOCIAL.map((item, i) => (<a className="mr-2" key={i} href={item.route}>{item.title}</a>))}
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className="d-flex align-items-center flex-column">
-                    <div>Disign and Dev by <a href="http://www.exlight.name">eXlight</a></div>
-                    <div>Code of Power 2019</div>
+                        <div>Disign and Dev by <a href="http://www.exlight.name">eXlight</a></div>
+                        <div>Code of Power 2019</div>
                     </div>
                 </div>
             </div>

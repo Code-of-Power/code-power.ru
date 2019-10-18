@@ -33,7 +33,7 @@ export const Peoples = connect((state: IStore) => state.teamReducer)(
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-6 d-flex flex-wrap">
-                            {MEMBERS.map(m => (<Member member={m} />))}
+                            {MEMBERS.map((m, i) => (<Member key={i} member={m} />))}
                         </div>
                         <div className="offset-md-1 col-4">
                             <Description activeMember={props.activeMember} />

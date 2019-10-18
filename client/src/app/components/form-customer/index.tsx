@@ -60,11 +60,10 @@ function FormCustomerComponent(props: IFormCustomerComponent) {
                     onChange={(e) => setForm(form.nextState({ ...form, interested: e.target.value }))}
                 >
                     {
-                        CUSTOMER_OPTIONS.map(o =>
-                            (<option disabled={o.disabled} selected={o.disabled} value={o.value}>
+                        CUSTOMER_OPTIONS.map((o, i) =>
+                            (<option key={i} disabled={o.disabled} selected={o.disabled} value={o.value}>
                                 {o.title}
-                            </option>
-                            ))
+                            </option>))
                     }
                 </select>
             </div>

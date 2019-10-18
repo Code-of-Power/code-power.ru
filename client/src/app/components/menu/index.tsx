@@ -7,8 +7,8 @@ export function Menu() {
             <div className="container d-flex justify-content-between">
                 <div>Code of Power</div>
                 <div>
-                    {MENU.map(item =>
-                        (<a href={item.route} className="menu-item font-weight-bold mx-2">{item.title}</a>))}
+                    {MENU.map((item, i) =>
+                        (<a key={i} href={item.route} className="menu-item font-weight-bold mx-2">{item.title}</a>))}
                 </div>
             </div>
         </nav>
