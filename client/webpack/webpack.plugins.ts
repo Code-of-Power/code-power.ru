@@ -6,10 +6,6 @@ import Dotenv from 'dotenv-webpack';
 
 export const getPlugins = (mode: boolean) => {
     const plugins = [
-        new Dotenv({
-            path: mode ? '/enviroment/prod.env' : '/enviroment/dev.env',
-            silent: false,
-        }),
         new HtmlWebpackPlugin({
             title: 'React App',
             template: './src/index.html',
@@ -30,7 +26,11 @@ export const getPlugins = (mode: boolean) => {
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css',
             chunkFilename: '[id].css',
-        })
+        }),
+        new Dotenv({
+            path: mode ? './src/enviroment/prod.env' : './src/enviroment/dev.env',
+            silent: false,
+        }),
     ];
     return plugins;
 };
