@@ -55,6 +55,16 @@ export default (_, argv) => {
                         hmr: process.env.NODE_ENV === DEVELOPMENT,
                     }
                 }, 'css-loader', 'sass-loader']
+            }, {
+                test: /\.(ttf|eot|svg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: [{
+                    loader: 'file-loader'
+                }]
+            }, {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: [{
+                    loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+                }],
             }]
         },
         plugins: getPlugins(isProd),
