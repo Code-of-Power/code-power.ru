@@ -6,6 +6,9 @@ import { IStore } from '@app/store';
 import { sendCustomerMessage } from '@app/api';
 import { IClientFormApi } from '@app/interfaces/api';
 import { CustomerForm } from '@app/models/customer.model';
+import { AnyAction, Dispatch } from 'redux';
+import { actions } from '@app/reducers/contact-screen';
+import { E_CONTACT_SCREEN_STATE } from '@app/enums';
 
 const mapState = (state: IStore) => ({
     isSending: state.forms.isSendingCustomer,
@@ -17,11 +20,12 @@ const mapProps = ({ sendCustomerMessage });
 interface IFormCustomerComponent {
     isSending: boolean;
     err: boolean;
+    dispatch: Dispatch<AnyAction>;
     sendCustomerMessage: (form: IClientFormApi) => Promise<void>
 }
 
 function FormCustomerComponent(props: IFormCustomerComponent) {
-    const { isSending, err, sendCustomerMessage } = props;
+    const { isSending, err, sendCustomerMessage, dispatch } = props;
     const [form, setForm] = React.useState<CustomerForm>(new CustomerForm());
     const send = async () => {
         try {
@@ -76,7 +80,9 @@ function FormCustomerComponent(props: IFormCustomerComponent) {
             </div>
             <div className="d-flex">
                 <div className="w-50 d-flex align-items-center mr-4">
-                    <Button type="danger">Отмена</Button>
+                    <Button type="danger"
+                        onClick={() => dispatch(actions.setScrenState(E_CONTACT_SCREEN_STATE.CONTACT))}
+                    >Отмена</Button>
                 </div>
                 <div className="w-50">
                     <Button type="primary" disabled={isSending}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { About } from './screens/about';
-import { ContactUs } from './screens/contact-us';
+import { ContactUsScreen } from './screens/contact-us';
 import { OurServices } from './screens/our-services';
 import { Peoples } from './screens/peoples';
 import { Projects } from './screens/projects';
@@ -14,7 +14,7 @@ import { actions } from '@app/reducers/app-state';
 import { AnyAction, Dispatch } from 'redux';
 import { IExtParallax } from './interfaces/app';
 import { xs_media, sm_media, md_media, xl_media, lg_media } from './consts/media';
-import { E_SCREEN_TYPE } from './enums/screen';
+import { E_SCREEN_TYPE } from './enums';
 
 interface IAppplicationProps {
     dispatch: Dispatch<AnyAction>;
@@ -77,7 +77,7 @@ export function Application(props: IAppplicationProps) {
                     <Projects />
                     <Peoples />
                     <OurServices />
-                    <ContactUs />
+                    <ContactUsScreen />
                     <Footer />
                 </div>
             </Parallax>

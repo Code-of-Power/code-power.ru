@@ -38,7 +38,7 @@ export function Projects() {
                 <div className="row justify-content-center">
                     <div className="col-5">
                         <div className="mb-4">
-                            <div className="h2 text-primary text-nowrap">Развииваем OpenSource</div>
+                            <div className="h2 text-primary text-nowrap">Развиваем OpenSource</div>
                         </div>
                         <div>
                             <ul className="text-white h3">

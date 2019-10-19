@@ -1,6 +1,6 @@
 import { createSymbiote } from 'redux-symbiote';
 import { AnyAction } from 'redux';
-import { E_SCREEN_TYPE } from '@app/enums/screen';
+import { E_SCREEN_TYPE } from '@app/enums';
 import { xs_media, sm_media, md_media, lg_media, xl_media } from '@app/consts/media';
 
 export interface IAppState {
