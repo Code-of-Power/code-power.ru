@@ -41,3 +41,5 @@ export const CODE_SOCIAL: IMenuItem[] = [{
     title: 'GitHub',
     route: ''
 }];
+
+export const FOOTER_WIDHT = 200;
