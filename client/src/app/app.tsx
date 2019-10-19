@@ -13,6 +13,8 @@ import { FOOTER_WIDHT } from './consts/menu';
 import { actions } from '@app/reducers/app-state';
 import { AnyAction, Dispatch } from 'redux';
 import { IExtParallax } from './interfaces/app';
+import { xs_media, sm_media, md_media, xl_media, lg_media } from './consts/media';
+import { E_SCREEN_TYPE } from './enums/screen';
 
 interface IAppplicationProps {
     dispatch: Dispatch<AnyAction>;
@@ -24,6 +26,12 @@ const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) =>
 export function Application(props: IAppplicationProps) {
     const { dispatch } = props;
     const footerPercent = FOOTER_WIDHT * 100 / document.body.clientHeight;
+    xs_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.xs)));
+    sm_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.sm)));
+    md_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.md)));
+    lg_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.lg)));
+    xl_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.xl)));
+
     return (
         <React.Fragment>
             <Menu />
