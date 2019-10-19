@@ -9,4 +9,8 @@
     .menu-item {
         color: $main-color;
     }
+    @media (min-width: 0) and (max-width: 768px) {
+        height: 60px;
+        width: 100%;
+    }
 }
