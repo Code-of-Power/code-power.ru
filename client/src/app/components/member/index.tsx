@@ -6,7 +6,7 @@ import { actions } from '@app/reducers/team-screen';
 
 interface IMemberProps {
     member: IMember;
-    [field: string]: any
+    [field: string]: any;
 }
 
 export const Member = connect((state: IStore) => state.teamReducer)((props: IMemberProps) => {

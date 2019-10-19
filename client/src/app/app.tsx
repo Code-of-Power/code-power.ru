@@ -6,18 +6,28 @@ import { Peoples } from './screens/peoples';
 import { Projects } from './screens/projects';
 import { Footer } from './components/footer';
 import { Menu } from './components/menu';
-import { Provider } from 'react-redux';
-import { store } from './store';
+import { connect } from 'react-redux';
 import { Firefly } from './components/firefly';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { FOOTER_WIDHT } from './consts/menu';
+import { actions } from '@app/reducers/app-state';
+import { AnyAction, Dispatch } from 'redux';
+import { IExtParallax } from './interfaces/app';
 
-export function Application() {
+interface IAppplicationProps {
+    dispatch: Dispatch<AnyAction>;
+}
+
+const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) =>
+    ref.container.onscroll = (e: Event & { target: HTMLDivElement }) => dispatch(actions.setScroll(e.target.scrollTop));
+
+export function Application(props: IAppplicationProps) {
+    const { dispatch } = props;
     const footerPercent = FOOTER_WIDHT * 100 / document.body.clientHeight;
     return (
-        <Provider store={store}>
+        <React.Fragment>
             <Menu />
-            <Parallax pages={5 + footerPercent} scrolling>
+            <Parallax pages={5 + footerPercent} ref={(ref: IExtParallax) => setScrollHandler(ref, dispatch)} scrolling>
                 <ParallaxLayer offset={1} speed={.2}>
                     <Firefly size={300} x={20} y={40} />
                     <Firefly size={200} x={60} y={30} />
@@ -54,7 +64,7 @@ export function Application() {
                     <Firefly size={70} x={90} y={500} />
                     <Firefly size={30} x={20} y={530} />
                 </ParallaxLayer>
-                <div className="fon-section">
+                <div className="fon-section" onScroll={(e) => console.warn(e)}>
                     <About />
                     <Projects />
                     <Peoples />
@@ -63,6 +73,8 @@ export function Application() {
                     <Footer />
                 </div>
             </Parallax>
-        </Provider>
+        </React.Fragment>
     );
 }
+
+export const App = connect()(Application)

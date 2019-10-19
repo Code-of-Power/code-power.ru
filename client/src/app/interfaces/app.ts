@@ -1,3 +1,5 @@
+import { Parallax } from 'react-spring/renderprops-addons';
+
 export interface IMenuItem {
     title: string;
     route: string;
@@ -21,4 +23,10 @@ export type CustomerOption = 'spa' | 'testing' | 'api' | 'mobile' | 'desktop' | 
 export interface IModel<T> {
     nextState(state:T): T;
     asState(): T;
+}
+
+export interface IExtParallax extends Parallax {
+    onScroll(event: any): void;
+    container: HTMLDivElement;
+    content: HTMLElement;
 }
