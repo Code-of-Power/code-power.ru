@@ -10,7 +10,7 @@ export function Menu() {
                     {MENU.map((item, i) =>
                         (<a key={i} href={item.route} className="menu-item font-weight-bold mx-2">{item.title}</a>))}
                 </div>
-                <div className="d-flex align-items-center bar">
+                <div className="d-flex d-md-none align-items-center bar">
                     <i className="la la-navicon"></i>
                 </div>
             </div>
