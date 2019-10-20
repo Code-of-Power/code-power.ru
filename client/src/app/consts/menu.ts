@@ -19,19 +19,19 @@ export const MENU: IMenuItem[] = [{
 
 export const SOCIAL: IMenuItem[] = [{
     title: 'VK',
-    route: ''
+    route: 'https://vk.com/code_of_power'
 }, {
     title: 'Twitter',
-    route: ''
+    route: 'https://twitter.com/code_of_power'
 }, {
     title: 'Facebook',
-    route: ''
+    route: 'fb.me/codeofpower'
 }, {
     title: 'Instagram',
-    route: ''
+    route: 'https://instagram.com/code_of_power'
 }, {
     title: 'Telegram',
-    route: ''
+    route: 't.me/code_of_power'
 }];
 
 export const CODE_SOCIAL: IMenuItem[] = [{
@@ -39,7 +39,7 @@ export const CODE_SOCIAL: IMenuItem[] = [{
     route: ''
 }, {
     title: 'GitHub',
-    route: ''
+    route: 'https://github.com/Code-of-Power'
 }];
 
 export const FOOTER_WIDHT = 200;
