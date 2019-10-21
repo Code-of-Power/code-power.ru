@@ -14,23 +14,45 @@ import { actions } from '@app/reducers/app-state';
 import { AnyAction, Dispatch } from 'redux';
 import { IExtParallax } from './interfaces/app';
 import { xs_media, sm_media, md_media, xl_media, lg_media } from './consts/media';
-import { E_SCREEN_TYPE } from './enums';
+import { E_SCREEN_TYPE, E_CONTACT_SCREEN_STATE } from './enums';
+import { ScreenCommutator } from './components/screen-commutator';
+import { Join } from './screens/join';
+import { Customer } from './screens/customer';
+import { IStore } from './store';
 
 interface IAppplicationProps {
+    contactScreenState: E_CONTACT_SCREEN_STATE;
     dispatch: Dispatch<AnyAction>;
 }
 
-const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) =>
-    ref.container.onscroll = (e: Event & { target: HTMLDivElement }) => dispatch(actions.setScroll(e.target.scrollTop));
+const mapProps = (state: IStore) => ({ contactScreenState: state.contactScreen.state });
+
+const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) => {
+    if (ref && ref.container) {
+        ref.container.onscroll = (e: Event & { target: HTMLDivElement }) =>
+            dispatch(actions.setScroll(e.target.scrollTop));
+    }
+}
 
 export function Application(props: IAppplicationProps) {
-    const { dispatch } = props;
+    const { dispatch, contactScreenState } = props;
     const footerPercent = FOOTER_WIDHT * 100 / document.body.clientHeight;
     xs_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.xs)));
     sm_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.sm)));
     md_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.md)));
     lg_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.lg)));
     xl_media.addListener(() => dispatch(actions.setScreenType(E_SCREEN_TYPE.xl)));
+
+    const activeIndex = (): 0 | 1 | 2 => {
+        switch (contactScreenState) {
+            case E_CONTACT_SCREEN_STATE.CONTACT:
+                return 1;
+            case E_CONTACT_SCREEN_STATE.JOIN:
+                return 0;
+            case E_CONTACT_SCREEN_STATE.CUSTOMER:
+                return 2;
+        }
+    }
 
     return (
         <React.Fragment>
@@ -77,7 +99,7 @@ export function Application(props: IAppplicationProps) {
                     <Projects />
                     <Peoples />
                     <OurServices />
-                    <ContactUsScreen />
+                    <ScreenCommutator activeIndex={activeIndex()} screens={[Join, ContactUsScreen, Customer]} />
                     <Footer />
                 </div>
             </Parallax>
@@ -85,4 +107,4 @@ export function Application(props: IAppplicationProps) {
     );
 }
 
-export const App = connect()(Application)
+export const App = connect(mapProps)(Application)

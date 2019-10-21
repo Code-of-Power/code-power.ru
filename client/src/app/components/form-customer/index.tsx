@@ -15,16 +15,20 @@ const mapState = (state: IStore) => ({
     err: state.forms.errSendCustomer,
 });
 
-const mapProps = ({ sendCustomerMessage });
+const mapProps = (dispatch: Dispatch<AnyAction>) => ({
+    sendCustomerMessage: (form: CustomerForm) => sendCustomerMessage(form)(dispatch),
+    dispatch
+});
 
 interface IFormCustomerComponent {
     isSending: boolean;
     err: boolean;
-    dispatch: Dispatch<AnyAction>;
-    sendCustomerMessage: (form: IClientFormApi) => Promise<void>
+    dispatch?: Dispatch<AnyAction>;
+    sendCustomerMessage: (form: CustomerForm) => Promise<void>;
 }
 
 function FormCustomerComponent(props: IFormCustomerComponent) {
+    console.warn(props);
     const { isSending, err, sendCustomerMessage, dispatch } = props;
     const [form, setForm] = React.useState<CustomerForm>(new CustomerForm());
     const send = async () => {
@@ -94,4 +98,4 @@ function FormCustomerComponent(props: IFormCustomerComponent) {
     )
 }
 
-export const FormCustomer = connect(mapState, mapProps)(FormCustomerComponent)
+export const FormCustomer = connect(mapState, mapProps)(FormCustomerComponent);

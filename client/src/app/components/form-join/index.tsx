@@ -17,11 +17,14 @@ const mapState = (state: IStore) => ({
 interface IFormJoinComponent {
     isSending: boolean;
     err: boolean;
-    dispatch: Dispatch<AnyAction>;
-    sendJoinMessage: (form: IJoinFormApi) => Promise<void>
+    dispatch?: Dispatch<AnyAction>;
+    sendJoinMessage: (form: IJoinFormApi) => Promise<void>;
 }
 
-const mapProps = ({ sendJoinMessage });
+const mapProps = (dispatch: Dispatch<AnyAction>) => ({
+    sendJoinMessage: (form: JoinForm) => sendJoinMessage(form)(dispatch),
+    dispatch
+});
 
 function FormJoinComponent(props: IFormJoinComponent) {
     const { isSending, err, sendJoinMessage, dispatch } = props;
