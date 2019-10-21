@@ -18,6 +18,18 @@ export interface IMember {
     photoUrl: string;
 }
 
+export interface ICarouselItem {
+    title: string;
+    image: string;
+    description: string;
+    tech: ITechItem[];
+}
+
+export interface ITechItem {
+    ico: string;
+    title: string;
+}
+
 export type CustomerOption = 'spa' | 'testing' | 'api' | 'mobile' | 'desktop' | 'devops';
 
 export interface IModel<T> {
