@@ -26,15 +26,18 @@
     .description-wrapper {
         @media (min-width: 0) and (max-width: 768px) {
             flex-direction: column-reverse;
+
             .description {
                 padding-top: 15%;
+                text-align: right;
             }
         }
 
         @media (min-width: 0) and (max-width: 768px) and (min-height: 600px) {
-             .description {
+            .description {
                 padding-top: 30%;
-             }
+                text-align: right;
+            }
         }
     }
 }

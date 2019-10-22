@@ -5,6 +5,16 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    @media (min-width: 0) and (max-width: 450px) {
+        max-width: 330px;
+    }
+
+    @media (min-width: 450px) and (max-width: 768px) {
+        max-width: 450px;
+    }
+}
+
 section {
     padding: $menu-height 0 0;
     min-height: 600px;
