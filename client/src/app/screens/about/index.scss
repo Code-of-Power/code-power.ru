@@ -1,9 +1,40 @@
 #about {
     background: url("/build/section-fon.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
     background-attachment: fixed;
+
     .tagline {
-        padding-bottom: 15%;
-        padding-top: 15%;
+        @media (min-width: 768px) and (min-height: 0) and (max-height: 600px) {
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
+
+        @media (min-width: 768px) and (min-height: 600px) and (max-height: 800px) {
+            padding-bottom: 8%;
+            padding-top: 10%;
+        }
+
+        @media (min-width: 768px) and (min-height: 800px) and (max-height: 1100px) {
+            padding-bottom: 15%;
+            padding-top: 25%;
+        }
+
+        padding-bottom: 25%;
+        padding-top: 25%;
+    }
+
+    .description-wrapper {
+        @media (min-width: 0) and (max-width: 768px) {
+            flex-direction: column-reverse;
+            .description {
+                padding-top: 15%;
+            }
+        }
+
+        @media (min-width: 0) and (max-width: 768px) and (min-height: 600px) {
+             .description {
+                padding-top: 30%;
+             }
+        }
     }
 }

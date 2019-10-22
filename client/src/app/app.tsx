@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { About } from './screens/about';
+import { AboutScreen } from './screens/about';
 import { ContactUsScreen } from './screens/contact-us';
 import { OurServices } from './screens/our-services';
 import { Peoples } from './screens/peoples';
@@ -27,13 +27,6 @@ interface IAppplicationProps {
 
 const mapProps = (state: IStore) => ({ contactScreenState: state.contactScreen.state });
 
-const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) => {
-    if (ref && ref.container) {
-        ref.container.onscroll = (e: Event & { target: HTMLDivElement }) =>
-            dispatch(actions.setScroll(e.target.scrollTop));
-    }
-}
-
 export function Application(props: IAppplicationProps) {
     const { dispatch, contactScreenState } = props;
     const footerPercent = FOOTER_WIDHT * 100 / document.body.clientHeight;
@@ -51,6 +44,22 @@ export function Application(props: IAppplicationProps) {
                 return 0;
             case E_CONTACT_SCREEN_STATE.CUSTOMER:
                 return 2;
+        }
+    }
+
+    let paralaxRef: HTMLDivElement;
+
+    const setScrollHandler = (ref: IExtParallax, dispatch: Dispatch<AnyAction>) => {
+        if (ref && ref.container) {
+            paralaxRef = ref.container;
+            ref.container.onscroll = (e: Event & { target: HTMLDivElement }) =>
+                dispatch(actions.setScroll(e.target.scrollTop));
+        }
+    }
+
+    const scrollTo = (position: number) => {
+        if (paralaxRef) {
+            paralaxRef.scrollTo({ behavior: 'smooth', top: position });
         }
     }
 
@@ -95,7 +104,7 @@ export function Application(props: IAppplicationProps) {
                     <Firefly size={30} x={20} y={530} />
                 </ParallaxLayer>
                 <div className="fon-section" onScroll={(e) => console.warn(e)}>
-                    <About />
+                    <AboutScreen scrollTo={scrollTo} />
                     <Projects />
                     <Peoples />
                     <OurServices />
