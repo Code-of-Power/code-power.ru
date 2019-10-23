@@ -4,6 +4,11 @@
     width: 180px;
     height: 180px;
 
+    @media (min-width: 0) and (max-width: 768px) {
+        width: 140px;
+        height: 140px;
+    }
+
     >div {
         background: #ffffff;
         border: 2px $main-color solid;
