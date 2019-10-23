@@ -6,14 +6,14 @@ export function Join() {
         <section className="vh-100">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-5">
+                    <div className="col-sm-12 col-md-5">
                         <div className="text-white h3">
                             Присоедениться к нам:
                         </div>
                         <FormJoin />
                     </div>
-                    <div className="col-4 offset-md-1">
-                        <div className="h3 text-white">
+                    <div className="col-sm-12 col-md-4 offset-md-1 description">
+                        <div className="h3 text-white font-italic">
                             Мы будем рады новым участникам нашей дружной команды,
                                 готовым развиваться и расти вместе с нами.
                                 Мы молоды и выбираем свой путь развития и совместный рост.

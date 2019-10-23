@@ -6,14 +6,14 @@ export function Customer() {
         <section className="vh-100">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-5">
+                    <div className="col-sm-12 col-md-5">
                         <div className="text-white h3">
                             Стать клиентом:
                         </div>
                         <FormCustomer />
                     </div>
-                    <div className="col-4 offset-md-1">
-                        <div className="h3 text-white">
+                    <div className="col-sm-12 col-md-4 offset-md-1 description">
+                        <div className="h3 text-white font-italic">
                             Мы любим создавать качественные решения и видеть результаты своей работы.
                             Мы готовы к трудностям и амбициозным задачам.
                             Довольный пользователь разработанного нами продукта - наша главная цель!
