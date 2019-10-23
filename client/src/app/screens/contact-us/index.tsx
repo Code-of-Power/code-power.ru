@@ -28,7 +28,7 @@ function ContactUs(props: IContactUsProps) {
                         </div>
                     </div>
                     <div className="col-sm-12 offset-md-2 col-md-5 description">
-                        <span className="text-white h3">
+                        <span className="text-white h3 font-italic">
                             Заинтересовали наши услуги? Хотите присоедениться к нам,
                             есть другие вопросы или предложения?
                             Заполните простую форму или отправьте нам письмо на&nbsp;
