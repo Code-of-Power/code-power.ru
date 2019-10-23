@@ -1,3 +1,5 @@
 .description {
-    margin-top: 20%;
+    @media (min-width: 0) and (max-width: 768px) {
+        margin-top: 20%;
+    }
 }
