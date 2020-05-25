@@ -1,10 +1,6 @@
 {
-    "watch": [
-        "src"
-    ],
-    "ext": "ts",
-    "ignore": [
-        "src/**/*.spec.ts"
-    ],
-    "exec": "NODE_ENV=dev ts-node -r dotenv/config src/main.ts dotenv_config_path=env/dev.env"
+  "watch": ["src"],
+  "ext": "ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "NODE_ENV=dev ts-node -r dotenv/config src/main.ts dotenv_config_path=env/dev.env"
 }

@@ -1,16 +1,16 @@
-@import "styles/_variables";
+@import 'styles/_variables';
 
 #menu {
-    z-index: 1;
-    height: $menu-height;
-    top: 0;
-    background: $text-color;
-    width: calc(100% - 15px);
-    .menu-item {
-        color: $main-color;
-    }
-    @media (min-width: 0) and (max-width: 768px) {
-        height: $menu-height-mobile;
-        width: 100%;
-    }
+  z-index: 1;
+  height: $menu-height;
+  top: 0;
+  background: $text-color;
+  width: calc(100% - 15px);
+  .menu-item {
+    color: $main-color;
+  }
+  @media (min-width: 0) and (max-width: 768px) {
+    height: $menu-height-mobile;
+    width: 100%;
+  }
 }

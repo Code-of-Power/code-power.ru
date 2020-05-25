@@ -1,11 +1,11 @@
 @import 'styles/variables';
 
 footer {
-    height: 200px;
-    background: $text-color;
-    padding: 20px 0;
-    @media (min-width: 0) and (max-width: 768px) {
-        padding: 0 10px;
-        height: 145px;
-    }
+  height: 200px;
+  background: $text-color;
+  padding: 20px 0;
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: 0 10px;
+    height: 145px;
+  }
 }

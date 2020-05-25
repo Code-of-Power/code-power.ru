@@ -1,16 +1,16 @@
-@import "styles/variables.scss";
+@import 'styles/variables.scss';
 
 #contact-us {
-    .description {
-        @media (min-width: 0) and (max-width: 768px) {
-            margin-top: 20%;
-        }
+  .description {
+    @media (min-width: 0) and (max-width: 768px) {
+      margin-top: 20%;
     }
+  }
 
-    .contact-head {
-        font-size: $size-sm-2;
-        @media (min-width: 0) and (max-width: 768px) {
-            margin-bottom: 20%;
-        }
+  .contact-head {
+    font-size: $size-sm-2;
+    @media (min-width: 0) and (max-width: 768px) {
+      margin-bottom: 20%;
     }
+  }
 }

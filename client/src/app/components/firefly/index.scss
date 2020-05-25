@@ -1,6 +1,6 @@
-@import "styles/variables";
+@import 'styles/variables';
 
 .firefly {
-    position: absolute;;
-    background: radial-gradient(circle closest-side, $main-color, transparent);
+  position: absolute;
+  background: radial-gradient(circle closest-side, $main-color, transparent);
 }

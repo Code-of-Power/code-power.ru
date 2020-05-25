@@ -1,4 +1,3 @@
-
 import 'reflect-metadata';
 import { render } from 'react-dom';
 import * as React from 'react';
@@ -10,7 +9,8 @@ import { store } from './app/store';
 const root = document.getElementById('app');
 
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>, root
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  root,
 );

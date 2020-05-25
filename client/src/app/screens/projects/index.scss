@@ -1,3 +1,10 @@
-.sourse-logo {
-    height: 25px;
+@import 'styles/_variables';
+
+.source-logo {
+  height: 25px;
+}
+
+.project-section {
+  background: $text-color;
+  border: 2px solid $main-color;
 }

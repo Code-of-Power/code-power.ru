@@ -1,40 +1,40 @@
-@import "styles/variables";
+@import 'styles/variables';
 
 .cop-button {
-    height: 60px;
-    width: 100%;
-    background: transparent;
-    color: $text-color;
+  height: 60px;
+  width: 100%;
+  background: transparent;
+  color: $text-color;
 
-    &.default {
-        height: 35px;
-        border: 2px solid $text-color;
-        transition: .5s box-shadow;
+  &.default {
+    height: 35px;
+    border: 2px solid $text-color;
+    transition: 0.5s box-shadow;
 
-        &:hover {
-            transition: .5s box-shadow;
-            box-shadow: 0 0.5rem 1rem $text-color;
-        }
+    &:hover {
+      transition: 0.5s box-shadow;
+      box-shadow: 0 0.5rem 1rem $text-color;
     }
+  }
 
-    &.danger {
-        height: 35px;
-        transition: .5s box-shadow;
-        border: 2px solid $danger-color;
+  &.danger {
+    height: 35px;
+    transition: 0.5s box-shadow;
+    border: 2px solid $danger-color;
 
-        &:hover {
-            transition: .5s box-shadow;
-            box-shadow: 0 0.5rem 1rem $danger-color;
-        }
+    &:hover {
+      transition: 0.5s box-shadow;
+      box-shadow: 0 0.5rem 1rem $danger-color;
     }
+  }
 
-    &.primary {
-        border: 2px solid $main-color;
-        transition: .5s box-shadow;
+  &.primary {
+    border: 2px solid $main-color;
+    transition: 0.5s box-shadow;
 
-        &:hover {
-            transition: .5s box-shadow;
-            box-shadow: 0 0.5rem 1rem $main-color;
-        }
+    &:hover {
+      transition: 0.5s box-shadow;
+      box-shadow: 0 0.5rem 1rem $main-color;
     }
+  }
 }

@@ -1,56 +1,61 @@
-@import "styles/variables.scss";
+@import 'styles/variables.scss';
 
 body {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    @media (min-width: 0) and (max-width: 450px) {
-        max-width: 330px;
-    }
+  @media (min-width: 0) and (max-width: 450px) {
+    max-width: 330px;
+  }
 
-    @media (min-width: 450px) and (max-width: 768px) {
-        max-width: 450px;
-    }
+  @media (min-width: 450px) and (max-width: 768px) {
+    max-width: 450px;
+  }
 }
 
 section {
-    padding: $menu-height 0 0;
-    min-height: 600px;
+  padding: $menu-height 0 0;
+  min-height: 600px;
 
-    @media (min-width: 0) and (max-width: 768px) {
-        padding: $menu-height-mobile 0 0;
-    }
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: $menu-height-mobile 0 0;
+  }
 }
 
 .fon-section {
-    background: url('/build/fon.png');
+  background: url('/build/fon.png');
 }
 
 .h1 {
-    font-size: $size-1;
-    font-weight: bold;
+  font-size: $size-1;
+  font-weight: bold;
 
-    @media (min-width: 0) and (max-width: 768px) {
-        font-size: $size-sm-1;
-    }
+  @media (min-width: 0) and (max-width: 768px) {
+    font-size: $size-sm-1;
+  }
 }
 
 .h2 {
-    font-size: $size-2;
-    font-weight: bold;
+  font-size: $size-2;
+  font-weight: bold;
 
-    @media (min-width: 0) and (max-width: 768px) {
-        font-size: $size-sm-2;
-    }
+  @media (min-width: 0) and (max-width: 768px) {
+    font-size: $size-sm-2;
+  }
 }
 
 .h3 {
-    font-size: $size-3;
-    font-weight: bold;
+  font-size: $size-3;
+  font-weight: bold;
 
-    @media (min-width: 0) and (max-width: 768px) {
-        font-size: $size-sm-3;
-    }
+  @media (min-width: 0) and (max-width: 768px) {
+    font-size: $size-sm-3;
+  }
+}
+
+.item {
+  background: $text-color;
+  border: 2px solid $main-color;
 }

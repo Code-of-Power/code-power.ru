@@ -1,11 +1,11 @@
-@import "styles/_variables";
+@import 'styles/_variables';
 
 .c-item {
-    background: $text-color;
-    width: 400px;
-    border: 2px solid $main-color;
+  background: $text-color;
+  width: 400px;
+  border: 2px solid $main-color;
 
-    &:hover {
-        box-shadow: 0 0.5rem 1rem $main-color;
-    }
+  &:hover {
+    box-shadow: 0 0.5rem 1rem $main-color;
+  }
 }

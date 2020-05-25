@@ -1,22 +1,29 @@
 import { IOption, CustomerOption } from '@app/interfaces/app';
 
-export const CUSTOMER_OPTIONS: IOption<CustomerOption>[] = [{
+export const CUSTOMER_OPTIONS: IOption<CustomerOption>[] = [
+  {
     title: 'Меня интересует',
     value: null,
-    disabled: true
-}, {
+    disabled: true,
+  },
+  {
     title: 'Разработка web SPA',
-    value: 'spa'
-}, {
+    value: 'spa',
+  },
+  {
     title: 'Серверные решения и API',
-    value: 'api'
-}, {
+    value: 'api',
+  },
+  {
     title: 'Тестирование',
-    value: 'testing'
-}, {
+    value: 'testing',
+  },
+  {
     title: 'Мобильная разработка',
-    value: 'mobile'
-}, {
+    value: 'mobile',
+  },
+  {
     title: 'Десктопные приложения',
-    value: 'desktop'
-}];
+    value: 'desktop',
+  },
+];

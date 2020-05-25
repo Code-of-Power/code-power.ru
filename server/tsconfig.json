@@ -1,24 +1,18 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "noImplicitUseStrict": true,
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "baseUrl": "src",
-        "lib": [
-            "es6",
-            "dom",
-            "es2015.reflect"
-        ],
-        "types": [],
-        "moduleResolution": "node"
-    },
-    "include": [
-        "./src/**/*"
-    ]
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "noImplicitUseStrict": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "src",
+    "lib": ["es6", "dom", "es2015.reflect"],
+    "types": [],
+    "moduleResolution": "node"
+  },
+  "include": ["./src/**/*"]
 }
